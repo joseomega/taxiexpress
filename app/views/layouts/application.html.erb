@@ -11,20 +11,22 @@
 <div id="header">
   <p>&nbsp</p>
 	<h1><a href=""><em>Taxi Xpress</em></a>	</h1>
+	<p>&nbsp</p>
+    <p>&nbsp</p>
 </div>
-<p>&nbsp</p>
-<p>&nbsp</p>
+
 <div style="clear:both"></div>
 <div id="content"><div class="inner_copy"></div>
 	<div><img src="<%= asset_path 'img4.jpg' %>" alt="" /></div>
 	<div id="colOne">
 		<div id="menu1">
 			<ul>
-				<li id="menu-01"><a href="#">Quienes somos</a></li>
-				<li id="menu-02"><a href="#">Login</a></li>
-				<li id="menu-03"><a href="#">Servicios</a></li>
+				<li><%= link_to 'Quienes Somos', root_path %></li>
+				<li id="menu-02"><a href="#">Iniciar Sesion</a></li>
+				<li id="menu-02"><a href="#">Pedir Taxi</a></li>
+				<li><%= link_to 'Servicios', servicio_path %></li>
 				<li id="menu-04"><a href="#">Tarifario</a></li>
-				<li id="menu-05"><a href="#">Contactenos</a></li>
+				<li> <%= link_to 'Contactenos', contacto_path %></li>
 			</ul>
 		</div>
 		<div class="margin-news">

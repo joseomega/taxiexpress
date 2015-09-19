@@ -16,16 +16,32 @@
     <%= f.text_field :Nombre %>
   </div>
   <div class="field">
+    <%= f.label :Apellido %><br>
+    <%= f.text_field :Apellido %>
+  </div>
+  <div class="field">
     <%= f.label :DNI %><br>
     <%= f.text_field :DNI %>
   </div>
   <div class="field">
     <%= f.label :Telefono %><br>
-    <%= f.number_field :Telefono %>
+    <%= f.text_field :Telefono %>
   </div>
   <div class="field">
     <%= f.label :Direccion %><br>
     <%= f.text_area :Direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :Correo %><br>
+    <%= f.text_field :Correo %>
+  </div>
+  <div class="field">
+    <%= f.label :Usuario %><br>
+    <%= f.text_field :Usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :Contraseña %><br>
+    <%= f.text_field :Contraseña %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Apellido:</strong>
+  <%= @cliente.Apellido %>
+</p>
+
+<p>
   <strong>Dni:</strong>
   <%= @cliente.DNI %>
 </p>
@@ -18,6 +23,21 @@
 <p>
   <strong>Direccion:</strong>
   <%= @cliente.Direccion %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @cliente.Correo %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @cliente.Usuario %>
+</p>
+
+<p>
+  <strong>Contraseña:</strong>
+  <%= @cliente.Contraseña %>
 </p>
 
 <%= link_to 'Edit', edit_cliente_path(@cliente) %> |
