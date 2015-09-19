@@ -4,6 +4,7 @@ class CreateClientes < ActiveRecord::Migration
       t.string :Nombre
       t.string :DNI
       t.integer :Telefono
+      t.text :Direccion
 
       t.timestamps null: false
     end

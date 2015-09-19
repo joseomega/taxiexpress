@@ -4,8 +4,10 @@ one:
   Nombre: MyString
   DNI: MyString
   Telefono: 1
+  Direccion: MyText
 
 two:
   Nombre: MyString
   DNI: MyString
   Telefono: 1
+  Direccion: MyText
