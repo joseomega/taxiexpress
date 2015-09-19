@@ -2,12 +2,20 @@
 
 one:
   Nombre: MyString
+  Apellido: MyString
   DNI: MyString
-  Telefono: 1
+  Telefono: MyString
   Direccion: MyText
+  Correo: MyString
+  Usuario: MyString
+  Contraseña: MyString
 
 two:
   Nombre: MyString
+  Apellido: MyString
   DNI: MyString
-  Telefono: 1
+  Telefono: MyString
   Direccion: MyText
+  Correo: MyString
+  Usuario: MyString
+  Contraseña: MyString
