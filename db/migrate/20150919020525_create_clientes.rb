@@ -5,7 +5,6 @@ class CreateClientes < ActiveRecord::Migration
       t.string :DNI
       t.integer :Telefono
       t.text :Direccion
-
       t.timestamps null: false
     end
   end
