@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Taxixpressapp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TaxiXpress</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="header">
+  <h1> </h1>
+	<h1><a href=""><em>Taxi Xpress</em></a>	</h1>
+</div>
+<div style="clear:both"></div>
+<div id="content"><div class="inner_copy"></div>
+	<div><img src="<%= asset_path 'img4.jpg' %>" alt="" /></div>
+	<div id="colOne">
+		<div id="menu1">
+			<ul>
+				<li id="menu-01"><a href="#">Quienes somos</a></li>
+				<li id="menu-02"><a href="#">Login</a></li>
+				<li id="menu-03"><a href="#">Servicios</a></li>
+				<li id="menu-04"><a href="#">Tarifario</a></li>
+				<li id="menu-05"><a href="#">Contactenos</a></li>
+			</ul>
+		</div>
+		<div class="margin-news">
+			<h2>&nbsp;</h2>
+			<p>&nbsp;</p>
+		</div>
+	</div>
+	<div id="colTwo">
+	  <%= yield %>
+		<h2>Bienvenidos a Taxi Xpress</h2>
+		<p>&nbsp;</p><br /><br />
+		<h2>Acerca de Taxi Xpress</h2>
+		<p>&nbsp;</p>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<div id="footer">
+	<div class="fleft"><p>Copyright statement.</p></div><div class="fright"><p>&nbsp;</p></div><div class="fclear"></div><div class="fcenter"><p>&nbsp;</p></div>
+</div>
 </body>
 </html>
+
+
+
+
+
+
