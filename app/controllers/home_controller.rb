@@ -8,4 +8,9 @@ class HomeController < ApplicationController
   def servicio
   end
   
+  def login
+  end
+  
+  def pedir
+  end
 end
