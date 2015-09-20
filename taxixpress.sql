@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.43, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: taxixpressapp_development
+-- Host: 0.0.0.0    Database: taxixpressapp_development
 -- ------------------------------------------------------
 -- Server version	5.5.43-0ubuntu0.14.04.1
 
@@ -25,9 +25,13 @@ DROP TABLE IF EXISTS `clientes`;
 CREATE TABLE `clientes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Apellido` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `DNI` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Telefono` int(11) DEFAULT NULL,
+  `Telefono` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Direccion` text COLLATE utf8_unicode_ci,
+  `Correo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Usuario` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Contraseña` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
@@ -62,7 +66,7 @@ CREATE TABLE `schema_migrations` (
 
 LOCK TABLES `schema_migrations` WRITE;
 /*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
-INSERT INTO `schema_migrations` VALUES ('20150918215431'),('20150919020525');
+INSERT INTO `schema_migrations` VALUES ('20150918215431'),('20150919020525'),('20150919230945');
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -75,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-19 21:23:36
+-- Dump completed on 2015-09-20  0:02:14
