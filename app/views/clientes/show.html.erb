@@ -1,44 +1,33 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Cliente -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @cliente.Nombre %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:Nombre) %>:</strong></dt>
+  <dd><%= @cliente.Nombre %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Apellido) %>:</strong></dt>
+  <dd><%= @cliente.Apellido %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:DNI) %>:</strong></dt>
+  <dd><%= @cliente.DNI %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Telefono) %>:</strong></dt>
+  <dd><%= @cliente.Telefono %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Direccion) %>:</strong></dt>
+  <dd><%= @cliente.Direccion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Correo) %>:</strong></dt>
+  <dd><%= @cliente.Correo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Usuario) %>:</strong></dt>
+  <dd><%= @cliente.Usuario %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Contraseña) %>:</strong></dt>
+  <dd><%= @cliente.Contraseña %></dd>
+</dl>
 
-<p>
-  <strong>Apellido:</strong>
-  <%= @cliente.Apellido %>
-</p>
-
-<p>
-  <strong>Dni:</strong>
-  <%= @cliente.DNI %>
-</p>
-
-<p>
-  <strong>Telefono:</strong>
-  <%= @cliente.Telefono %>
-</p>
-
-<p>
-  <strong>Direccion:</strong>
-  <%= @cliente.Direccion %>
-</p>
-
-<p>
-  <strong>Correo:</strong>
-  <%= @cliente.Correo %>
-</p>
-
-<p>
-  <strong>Usuario:</strong>
-  <%= @cliente.Usuario %>
-</p>
-
-<p>
-  <strong>Contraseña:</strong>
-  <%= @cliente.Contraseña %>
-</p>
-
-<%= link_to 'Editar', edit_cliente_path(@cliente) %> |
-<%= link_to 'Regresar', clientes_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              clientes_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_cliente_path(@cliente), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              cliente_path(@cliente),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

@@ -1,51 +1,22 @@
-<%= form_for(@cliente) do |f| %>
-  <% if @cliente.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+<%= simple_form_for @cliente, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :Nombre %>
+  <%= error_span(@cliente[:Nombre]) %>
+  <%= f.input :Apellido %>
+  <%= error_span(@cliente[:Apellido]) %>
+  <%= f.input :DNI %>
+  <%= error_span(@cliente[:DNI]) %>
+  <%= f.input :Telefono %>
+  <%= error_span(@cliente[:Telefono]) %>
+  <%= f.input :Direccion %>
+  <%= error_span(@cliente[:Direccion]) %>
+  <%= f.input :Correo %>
+  <%= error_span(@cliente[:Correo]) %>
+  <%= f.input :Usuario %>
+  <%= error_span(@cliente[:Usuario]) %>
+  <%= f.input :Contraseña %>
+  <%= error_span(@cliente[:Contraseña]) %>
 
-      <ul>
-      <% @cliente.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :Nombre %><br>
-    <%= f.text_field :Nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :Apellido %><br>
-    <%= f.text_field :Apellido %>
-  </div>
-  <div class="field">
-    <%= f.label :DNI %><br>
-    <%= f.text_field :DNI %>
-  </div>
-  <div class="field">
-    <%= f.label :Telefono %><br>
-    <%= f.text_field :Telefono %>
-  </div>
-  <div class="field">
-    <%= f.label :Direccion %><br>
-    <%= f.text_area :Direccion %>
-  </div>
-  <div class="field">
-    <%= f.label :Correo %><br>
-    <%= f.text_field :Correo %>
-  </div>
-  <div class="field">
-    <%= f.label :Usuario %><br>
-    <%= f.text_field :Usuario %>
-  </div>
-  <div class="field">
-    <%= f.label :Contraseña %><br>
-    <%= f.text_field :Contraseña %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                clientes_path, :class => 'btn btn-default' %>
 <% end %>
-
-

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :chofers
   resources :clientes
   root 'home#index'
   get '/servicio', to: 'home#servicio'

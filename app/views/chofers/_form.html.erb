@@ -1,0 +1,16 @@
+<%= simple_form_for @chofer, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :Nombre %>
+  <%= error_span(@chofer[:Nombre]) %>
+  <%= f.input :Apellido %>
+  <%= error_span(@chofer[:Apellido]) %>
+  <%= f.input :Auto %>
+  <%= error_span(@chofer[:Auto]) %>
+  <%= f.input :Direccion %>
+  <%= error_span(@chofer[:Direccion]) %>
+  <%= f.input :Telefono %>
+  <%= error_span(@chofer[:Telefono]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                chofers_path, :class => 'btn btn-default' %>
+<% end %>
