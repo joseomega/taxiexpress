@@ -5,13 +5,12 @@
   <%= error_span(@chofer[:Apellido]) %>
   <%= f.input :DNI %>
   <%= error_span(@chofer[:DNI]) %>
-  <%= f.input :Auto %>
-  <%= error_span(@chofer[:Auto]) %>
   <%= f.input :Direccion %>
   <%= error_span(@chofer[:Direccion]) %>
   <%= f.input :Telefono %>
   <%= error_span(@chofer[:Telefono]) %>
-
+  <%= f.association :auto %>
+  <%= error_span(@chofer[:auto_id]) %>
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 chofers_path, :class => 'btn btn-default' %>

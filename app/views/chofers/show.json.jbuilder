@@ -1,1 +1,1 @@
-json.extract! @chofer, :id, :Nombre, :Apellido, :Auto, :Direccion, :Telefono, :created_at, :updated_at
+json.extract! @chofer, :id, :Nombre, :Apellido, :DNI, :Direccion, :Telefono, :auto_id, :created_at, :updated_at

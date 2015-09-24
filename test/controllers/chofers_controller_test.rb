@@ -18,7 +18,7 @@ class ChofersControllerTest < ActionController::TestCase
 
   test "should create chofer" do
     assert_difference('Chofer.count') do
-      post :create, chofer: { Apellido: @chofer.Apellido, Auto: @chofer.Auto, Direccion: @chofer.Direccion, Nombre: @chofer.Nombre, Telefono: @chofer.Telefono }
+      post :create, chofer: { Apellido: @chofer.Apellido, DNI: @chofer.DNI, Direccion: @chofer.Direccion, Nombre: @chofer.Nombre, Telefono: @chofer.Telefono, auto_id: @chofer.auto_id }
     end
 
     assert_redirected_to chofer_path(assigns(:chofer))
@@ -35,7 +35,7 @@ class ChofersControllerTest < ActionController::TestCase
   end
 
   test "should update chofer" do
-    patch :update, id: @chofer, chofer: { Apellido: @chofer.Apellido, Auto: @chofer.Auto, Direccion: @chofer.Direccion, Nombre: @chofer.Nombre, Telefono: @chofer.Telefono }
+    patch :update, id: @chofer, chofer: { Apellido: @chofer.Apellido, DNI: @chofer.DNI, Direccion: @chofer.Direccion, Nombre: @chofer.Nombre, Telefono: @chofer.Telefono, auto_id: @chofer.auto_id }
     assert_redirected_to chofer_path(assigns(:chofer))
   end
 

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Marca: MyString
+  Modelo: MyString
+  Año: 2015-09-23
+  Placa: MyString
+  Capacidad: 1
+
+two:
+  Marca: MyString
+  Modelo: MyString
+  Año: 2015-09-23
+  Placa: MyString
+  Capacidad: 1

@@ -3,13 +3,15 @@
 one:
   Nombre: MyString
   Apellido: MyString
-  Auto: MyString
+  DNI: MyString
   Direccion: MyText
   Telefono: MyString
+  auto_id: 
 
 two:
   Nombre: MyString
   Apellido: MyString
-  Auto: MyString
+  DNI: MyString
   Direccion: MyText
   Telefono: MyString
+  auto_id: 

@@ -3,6 +3,8 @@ class ChofersController < ApplicationController
 
   # GET /chofers
   # GET /chofers.json
+   
+  
   def index
     @chofers = Chofer.all
   end
@@ -69,6 +71,6 @@ class ChofersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chofer_params
-      params.require(:chofer).permit(:Nombre, :Apellido, :Auto, :Direccion, :Telefono)
+      params.require(:chofer).permit(:Nombre, :Apellido, :DNI, :Direccion, :Telefono, :auto_id)
     end
 end

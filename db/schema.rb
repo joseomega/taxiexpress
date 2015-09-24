@@ -11,17 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150923053348) do
+ActiveRecord::Schema.define(version: 20150923140724) do
+
+  create_table "autos", force: :cascade do |t|
+    t.string   "Marca",      limit: 255
+    t.string   "Modelo",     limit: 255
+    t.date     "Año"
+    t.string   "Placa",      limit: 255
+    t.integer  "Capacidad",  limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "chofers", force: :cascade do |t|
     t.string   "Nombre",     limit: 255
     t.string   "Apellido",   limit: 255
-    t.string   "Auto",       limit: 255
+    t.string   "DNI",        limit: 255
     t.text     "Direccion",  limit: 65535
     t.string   "Telefono",   limit: 255
+    t.integer  "auto_id",    limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
+
+  add_index "chofers", ["auto_id"], name: "index_chofers_on_auto_id", using: :btree
 
   create_table "clientes", force: :cascade do |t|
     t.string   "Nombre",     limit: 255
@@ -36,4 +49,5 @@ ActiveRecord::Schema.define(version: 20150923053348) do
     t.datetime "updated_at",               null: false
   end
 
+  add_foreign_key "chofers", "autos"
 end
