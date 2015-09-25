@@ -9,7 +9,7 @@
   <%= error_span(@chofer[:Direccion]) %>
   <%= f.input :Telefono %>
   <%= error_span(@chofer[:Telefono]) %>
-  <%= f.association :auto %>
+  <%= f.association :auto_p %>
   <%= error_span(@chofer[:auto_id]) %>
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
