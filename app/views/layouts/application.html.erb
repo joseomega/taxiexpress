@@ -9,8 +9,9 @@
 </head>
 <body>
 <div id="header">
+
   <p>&nbsp</p>
-	<h1><a href=""><em>Taxi Xpress</em></a>	</h1>
+	<h1><a href=<%= root_path %>><em>Taxi Xpress</em></a>	</h1>
 	<p>&nbsp</p>
     <p>&nbsp</p>
 </div>
@@ -21,12 +22,7 @@
 	<div id="colOne">
 		<div id="menu1">
 			<ul>
-				<li><%= link_to 'Quienes Somos', root_path %></li>
-				<li><%= link_to 'Chofer' , chofers_path %></li>
-				<li><%= link_to 'Cliente' , clientes_path %></li>
-				<li><%= link_to 'Servicios', servicio_path %></li>
-				<li><%= link_to 'Auto' , autos_path %></li>
-				<li> <%= link_to 'Contactenos', contacto_path %></li>
+				<%= render 'layouts/menu' %> 
 			</ul>
 		</div>
 		<div class="margin-news">
@@ -36,7 +32,6 @@
 	</div>
 	<div id="colTwo">
 	     <%= yield %>
-		
 	</div>
 	<div style="clear:both"></div>
 </div>

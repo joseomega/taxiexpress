@@ -27,7 +27,12 @@ gem 'simple_form', '~> 3.1.1'
 gem 'therubyracer', '~> 0.12.2'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+#Admin Management
+gem 'rails_admin'
 
+#Autentication magement
+gem 'devise'
+gem  'devise-bootstrap-views'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
