@@ -1,15 +1,13 @@
 <li><%= link_to 'Quienes Somos', root_path %></li>
 <li>
         <% if current_user %>
-          Signed in as <%= current_user.email %>
-          <%= " | " %>
           <%= link_to "Sing out", destroy_user_session_path, method: :delete%>
         <% else %>
-          <%= link_to "Iniciar Sesio", rails_admin_path %>
+          <%= link_to "Iniciar Sesión", rails_admin_path %>
         <% end %>  
   
   </li>
-<li><%= link_to 'Pedir Taxi' , clientes_path %></li>
+<li><%= link_to 'Pedir Taxi' , pedir_path %></li>
 <li><%= link_to 'Servicios', servicio_path %></li>
-<li><%= link_to 'Tarifario' , autos_path %></li>
+<li><%= link_to 'Tarifario' , tarifa_path %></li>
 <li> <%= link_to 'Contactenos', contacto_path %></li>

@@ -11,4 +11,7 @@ class HomeController < ApplicationController
   
   def pedir
   end
+  
+  def tarifa
+  end
 end
