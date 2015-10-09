@@ -15,9 +15,8 @@
 	<p class ="nvbar-text navbar-right">
 	      <% if current_user %>
           Sesion de  <%= current_user.email %>
-          <%= " | " %>
-          <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete%>
-          <%= link_to "Consola Admin", rails_admin_path %>
+           <%= " | " %>
+          <%= link_to "Consola", rails_admin_path %>
         <% else %>
           <%= link_to "", rails_admin_path %>
         <% end %> 

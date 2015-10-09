@@ -3,7 +3,7 @@
         <% if current_user %>
           <%= link_to "Sing out", destroy_user_session_path, method: :delete%>
         <% else %>
-          <%= link_to "Iniciar Sesión", rails_admin_path %>
+          <%= link_to "Sing in", rails_admin_path %>
         <% end %>  
   
   </li>
