@@ -13,3 +13,6 @@
   
   Obtener repositorio
   git clone git@github.com:joseomega/taxiexpress.git
+  
+  sudo mysqldump -u root -p taxixpressapp_development > taxixpress.sql --- subir base de datos
+  sudo mysqldump -u root -p taxixpressapp_development < taxixpress.sql --- bajar base de datos
